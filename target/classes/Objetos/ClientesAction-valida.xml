@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+                            "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+    <field name="cliente.nombre">
+        <field-validator type="requiredstring">
+            <message>El nombre no puede estar vacia</message>
+        </field-validator>
+    </field>
+     <field name="cliente.apellidos">
+        <field-validator type="requiredstring">
+            <message>Los apellidos no pueden estar vacia</message>
+        </field-validator>
+    </field>
+     <field name="cliente.direccion">
+        <field-validator type="requiredstring">
+            <message>La direccion no puede estar vacia</message>
+        </field-validator>
+    </field>
+      <field name="cliente.correo">
+        <field-validator type="email">
+            <message>Escriba una dirección de email correctamente</message>
+        </field-validator>
+    </field>
+    <field name="cliente.edad">
+        <field-validator type="String">
+            <param name="min">12</param>
+            <param name="max">100</param>
+            <message>Introduzca un rango de edad entre 12 y 100</message>
+        </field-validator>
+    </field>
+     <field name="cliente.cp">
+        <field-validator type="int">
+            <param name="min">1000</param>
+            <param name="max">99999</param>
+            <message>Escribe un codigo postal entre 1000 y 99999</message>
+        </field-validator>
+    </field>
+</validators>
